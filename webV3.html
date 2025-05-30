@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 로봇 뉴스</title>
+  <style>
+    :root {
+      --primary: #20232a;
+      --accent: #444;
+      --bg: #f4f4f4;
+      --card-bg: white;
+      --text: #333;
+      --hover: #f0f0f0;
+      --highlight: #007acc;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--primary);
+      color: white;
+      padding: 15px 20px;
+      z-index: 1000;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+
+    .container {
+      padding: 100px 20px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .main-news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: var(--card-bg);
+    }
+
+    .main-news-text {
+        padding: 30px 20px 20px;
+        text-align: center;
+        color: var(--text);
+    }
+    .main-news-image {
+        width: 100%;
+        height: 600px;
+        background-image: url("AI\ 감정.png");
+        background-size: cover;
+        background-position: 0 25%;
+        background-repeat: no-repeat;
+    }
+
+    .main-news h2 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    .main-news p {
+      font-size: 1.2em;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .news-card {
+      background-color: var(--card-bg);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .news-card:hover {
+      background-color: var(--hover);
+      transform: translateY(-3px);
+    }
+
+    .news-meta {
+      font-size: 0.9em;
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    .news-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      object-position: 0 10%;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--highlight);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-top: 2px solid var(--accent);
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #333;
+    }
+
+    fieldset {
+      border: none;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    @media (min-width: 768px) {
+      main {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AI 로봇 뉴스</h1>
+</header>
+
+<div class="container">
+
+  <section class="main-news">
+  <div class="main-news-text">
+    <h2>휴머노이드 로봇, 사람과 감정 소통 가능해졌다!</h2>
+    <p>차세대 AI가 로봇의 감정 이해 능력을 획기적으로 향상시켰습니다.</p>
+  </div>
+  <div class="main-news-image"></div>
+</section>
+
+  <main>
+
+    <article class="news-card">
+      <img class="news-image" src="안전검사.png" alt="공장 로봇">
+      <div class="news-meta">2025년 5월 28일 · 산업 AI</div>
+      <h3>AI 로봇, 공장에서 인간 대신 안전 검사</h3>
+      <p>최신 AI 로봇이 위험한 작업 현장에서 인간을 대신하여 안전 검사를 수행하고 있습니다. 이 로봇은 고온, 고압 환경에서도 정밀한 센서를 통해 작업자의 안전을 책임지고 있습니다.</p>
+      <a href="news1.html" class="read-more">자세히 보기 →</a>
+    </article>
+
+    <article class="news-card">
+      <img class="news-image" src="로봇개.png" alt="로봇개 스팟">
+      <div class="news-meta">2025년 5월 27일 · 구조 기술</div>
+      <h3>로봇개 ‘스팟’, 구조 현장에서 활약</h3>
+      <p>Boston Dynamics의 로봇개 ‘스팟’이 재난 구조 현장에서 생존자를 탐색하고 구조 작전을 보조하는 데 성공했습니다. AI 기반 센서와 자율 주행 기능이 핵심 역할을 했습니다.</p>
+      <a href="news2.html" class="read-more">자세히 보기 →</a>
+    </article>
+
+    <article class="news-card">
+      <img class="news-image" src="AI 교사.png" alt="AI 교사 로봇">
+      <div class="news-meta">2025년 5월 25일 · 교육 혁신</div>
+      <h3>AI 로봇 교사, 초등학교에 첫 배치</h3>
+      <p>서울 시내 한 초등학교에 AI 로봇 교사가 배치되어 수업을 진행 중입니다. 로봇은 아이들과 자연스럽게 소통하고 학습 데이터를 분석하여 맞춤형 수업을 제공합니다.</p>
+      <a href="news3.html" class="read-more">자세히 보기 →</a>
+    </article>
+
+  </main>
+
+  <form>
+    <h3>뉴스 구독 신청</h3>
+
+    <label for="email">이메일 입력:</label>
+    <input type="email" id="email" placeholder="example@domain.com">
+
+    <fieldset>
+      <legend>관심 분야 선택:</legend>
+      <label><input type="checkbox" name="interest" value="ai"> 인공지능</label>
+      <label><input type="checkbox" name="interest" value="robot"> 로봇공학</label>
+      <label><input type="checkbox" name="interest" value="tech"> 기술 트렌드</label>
+    </fieldset>
+
+    <input type="submit" value="구독 신청">
+  </form>
+
+</div>
+
+<footer>
+  © 2025 AI 로봇 뉴스 | 모든 권리 보유
+</footer>
+
+</body>
+</html>
